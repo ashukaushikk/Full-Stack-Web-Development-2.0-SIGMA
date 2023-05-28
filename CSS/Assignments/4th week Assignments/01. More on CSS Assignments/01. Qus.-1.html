@@ -1,0 +1,45 @@
+<!-- Question-1 :- Create a navigation bar similar to the below-mentioned image. The navigation bar must contain 5 navigation links that are properly place within the navigation bar using the CSS box model. the navigation items must change their text color on hover. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/PW Skill Work/Image/AK Logo edit.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-1</title>
+    <style>
+       .box{
+            background-color: rgb(57, 165, 228);
+        }
+       .box ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box li a{
+            padding: 10px 13px;
+            color: white;
+        }
+        .box li a:hover{
+            color: yellow; 
+        }
+    </style>
+</head>
+<body style="line-height: 25px; background-color: rgb(245, 229, 206);">
+    <div class="box">
+        <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Login</a></li>
+            </ul>
+        </nav>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- Question-7 :- Create a web page with a background image that covers the entire screen. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/PW Skill Work/Image/AK Logo edit.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-7</title>
+</head>
+    <style>
+        body, html {
+        height: 100%;
+        }
+
+        .box {
+        /* The image used */
+        background-image: url("./skills-3262172_640.jpg");
+
+        /* Full height */
+        height: 95%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        font-variant: small-caps;
+        }
+        p{
+            background-color: rgba(144, 226, 247, 0.925);
+        }
+    </style>
+<body>
+    <div class="box">
+        <p>Background image</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- Question-6 :- Create a web page with a form where the input field has a yellow background color when it is focused on.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/PW Skill Work/Image/AK Logo edit.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-6</title>
+    <style>
+        #form-container{
+            display: flex;
+            justify-content: center;
+        }
+        #form-container input[type=text] {
+            width: 200px;
+            height: 20px;
+            padding: 10px;
+            background-color: white;
+            transition: background-color 0.5s;
+            border: none;
+        }
+        #form-container input[type=text]:focus{
+            background-color: rgb(255, 238, 0);
+        }
+    </style>
+    </head>
+    <body style="line-height: 25px; background-color: rgb(245, 229, 206);">
+        <div id="form-container">
+            <form action="">
+                <label for="Name">Student Name</label> </br>
+                <input type="text" id="Name"> </br>
+                <input type="button" value="Submit"> <input type="reset">
+            </form>
+
+        </div>
+    </body>
+    </html>

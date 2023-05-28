@@ -1,0 +1,20 @@
+<!-- Question-5 :- Write a short notes on the tab index. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="/PW Skill Work/Image/AK Logo edit.jpg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question-5</title>
+</head>
+<body style="line-height: 25px; background-color: rgb(245, 229, 206);">
+    <h1>Tab Index</h1><hr>
+    <p>Tab index is an attribute used in web development to define the order in which elements receive focus when users navigate through a webpage using the Tab key on their keyboard. It helps in improving the accessibility and usability of web pages, particularly for individuals who rely on keyboard navigation or assistive technologies.</p>
+    <ol>
+        <li><b>Purpose</b>: The tab index attribute is used to specify the sequential order in which elements can be accessed using the keyboard's Tab key. By default, elements such as links, form inputs, and buttons are included in the natural tab order based on their position in the HTML source code. However, the tab index attribute allows developers to override this default order and customize the focus navigation.</li>
+        <li><b>Values</b>: The tab index attribute accepts numerical values, where each value represents the order of the element in the tab sequence. Elements with a lower tab index value will be focused first when navigating using the Tab key. It is important to note that only elements with a positive tab index value (greater than or equal to 1) are included in the tab order. Elements with a tab index of 0 are also considered part of the tab order but are focused last, after elements with positive tab index values.</li>
+        <li><b>Skipping elements</b>: In some cases, developers may want to exclude certain elements from the tab order. To achieve this, they can set the tab index attribute to a negative value (-1). Elements with a tab index of -1 are programmatically focusable but are skipped when navigating using the Tab key. This is useful for elements that should not receive keyboard focus, such as decorative images or hidden elements that are accessed via other means.</li>
+    </ol>
+</body>
+</html>
