@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    color:rgb(237, 247, 255);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 25px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+.main{
+    /* border: 2px solid blueviolet; */
+    width: 200px;
+    height: 100vh;
+    /* position: relative; */
+    float: left;
+    margin-right: 40px;
+}
+.sidebar{
+    height: 100%;
+    background-color: rgb(22, 22, 22);
+}
+.sidebar img{
+    background-color: rgb(98, 168, 230);
+    width: 100%;
+    border-radius: 5px;
+    display: block;
+}
+.sidebar li{
+    border: 2px dashed black;
+    margin: 0;
+    padding: 5px 10px;
+    list-style: none;
+}
+.sidebar a{
+    text-decoration: none;
+}
+.sidebar a:hover{
+    color: yellow;
+    font-weight: bold;
+    font-size: large;
+}
+h1{
+    text-align: center;
+    padding-top: 5px;
+    color: rgb(81, 44, 245);
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+.content{
+    margin: auto;
+    text-align: center;
+    position: static;
+}
+p{
+    display: block;
+    text-align: justify;
+    margin-right: 40px;
+}
+.content img{
+    margin: 10px;
+    width: 450px;
+    border-radius: 10px;
+}
+.chatbot{
+    width: 5%;
+}
+.chatbot img{
+    width: 100px;
+    position: fixed;
+    right: 20px;
+    bottom: 2px;
+}
