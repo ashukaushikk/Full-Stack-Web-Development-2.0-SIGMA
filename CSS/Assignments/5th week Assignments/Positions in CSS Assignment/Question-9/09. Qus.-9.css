@@ -6,6 +6,7 @@
     font-family: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
+
 body{
     background-color: #d6d6d6;
     color: #000000;
@@ -26,6 +27,7 @@ body{
     cursor: pointer;
     text-transform: capitalize;
 }
+
 .option-bar{
     display: none;
     position: absolute;
@@ -38,12 +40,14 @@ body{
     background-color: aliceblue;
     padding-left: 10px;
 }
+
 a{
     display: block;
     padding: 10px;
     text-decoration: none;
     color: #000000; 
 }
+
 .dropdown:hover .option-bar{
         display: block;
 }
