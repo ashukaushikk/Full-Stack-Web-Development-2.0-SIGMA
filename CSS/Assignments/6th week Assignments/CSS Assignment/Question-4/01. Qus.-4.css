@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 25px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(253, 254, 255);
+}
+
+.container{
+    background-color: rgb(253, 254, 255);
+    /* border: 1px solid blue; */
+    position: relative;
+    height: 700px;
+}
+
+.header{
+    display: flex;
+    background-color: rgb(253, 254, 255);
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    gap: 30px;
+    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 5px 0px black;
+    font-size: 12px;
+    top: 0;
+}
+
+.header img{
+    width: 80px;
+}
+
+.logo{
+    flex:auto;
+    margin: 3px 0 0 5%;
+}
+
+.header a{
+    text-decoration: none;
+    color: #227eff;
+    font-weight: bold;
+    padding: 0;
+}
+
+.header span{
+    text-decoration: none;
+    background-color: #227eff;
+    color: #f1f9ff;
+    font-weight: bold;
+    padding: 13px;
+    border-radius: 5px;
+}
+
+.link2{
+    border: 1px solid #227eff;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.link3{
+    margin-right: 5%;
+}
+
+.main{
+    margin: 6% 2% 0 10%;
+    display: flex;
+    flex-direction: row;
+    /* width: 1000px; */
+}
+
+.left{
+    margin: 70px 10px 0 0;
+    width: 500px;
+    height: 500px;
+}
+ 
+.left h1{
+    font-size: 50px;
+    line-height: 60px;
+}
+
+.left p{
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.button-box{
+    display: flex;
+}
+
+.button{
+    margin: 20px 20px 0 0;
+    padding: 8px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.button-1 a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.button-2 a{
+    text-decoration: none;
+    Color: #227eff;
+}
+.button-1{
+    background-color: #227eff;
+    width: 200px;
+}
+
+.button-2{
+    width: 150px;
+    background-color: #ffffff;
+}
+
+.right{
+    width: 900px;
+}
+
+.right img{
+    width: 100%;
+}
