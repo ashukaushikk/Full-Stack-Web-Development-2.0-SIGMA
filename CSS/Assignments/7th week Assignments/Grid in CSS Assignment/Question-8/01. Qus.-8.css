@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 25px;
+    box-sizing: border-box;
+}
+
+.container{
+    border: 2px solid #000000;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 1% 1%;
+    margin: 2%;
+    border-radius: 10px;
+}
+.box-container{
+    width: 95%;
+    height: 800px;
+    gap: 10px;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, auto);
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(2, 350px); */
+    /* row-gap: 20px; */
+    /* column-gap: 50px; */
+    margin: 2% 0 0 2.5%;
+}
+
+.heading{
+    grid-row: 1/2;
+    grid-column: 1/5;
+}
+
+div{
+    border: 5px solid black;
+}
+
+.table{
+    display: flex;
+    border-radius: 5%;
+    /* height: 350px; */
+    /* text-align: center; */
+    /* padding-top: 50%; */
+    align-items: center;
+    justify-content: center;
+}
+
+.table1{
+    background-color: #8D3DAF;
+}
+.table2{
+    background-color: #E07C24;
+}
+.table3{
+    background-color: #758283;
+}
+.table4{
+    background-color: #E03B8B;
+}
+.table5{
+    background-color: #FF6666;
+}
+.table6{
+    background-color: #03C6C7;
+}
+.table7{
+    background-color: #CAD5E2;
+}
+.table8{
+    background-color: #35BDD0;
+}
+
