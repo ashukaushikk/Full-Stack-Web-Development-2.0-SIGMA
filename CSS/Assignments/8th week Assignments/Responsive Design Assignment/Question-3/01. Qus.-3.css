@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+}
+
+.header{
+    background-color: #000000;
+    border: 1px solid black;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Start styling of "Logo" */
+
+.logo{
+    color: #0f67ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* here it's styling ending of "Logo" */
+
+/* Start Styling of "Menubar" */
+
+.menubar{
+    display: flex;
+}
+
+.menubar a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 2rem;
+}
+
+/* here it's styling ending of "Menubar" */
+
+/* Start Styling of "Button" */
+
+.button{
+    background-color: hsl(215, 100%, 53%);
+    padding: 0.3em 2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* here it's styling ending of "Button" */
+
+/* Start Styling of "Main" */
+
+.main{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: 85vh;
+    /* border: 2px solid red; */
+    margin: 1rem 6rem 0 6rem;
+    justify-content: space-between;
+    font-weight: bold;
+    /* flex-wrap: wrap; */
+}
+
+.box-left{
+    width: 40%;
+    height: 100%;
+    /* border: 1px solid blue; */
+}
+
+.box-left h1, span{
+    color: hsl(218, 100%, 54%);
+    /* padding: 1rem 0; */
+}
+
+.box-left h2{
+    margin-top: 4rem;
+}
+
+.box-left h1{
+    font-size: 3rem;
+    margin: 1rem 0 2rem 0;
+}
+
+.box-left img{
+    width: 70%;
+    margin: 2rem 0;
+}
+
+.box-left p{
+    font-size: 0.7rem;
+}
+
+.box-right{
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid green; */
+}
+
+.box-right img{
+    /* border: 1px solid navy; */
+    width: 100%;
+    height: 100%;
+}
+    
+    /* here it's styling ending of "Main" */
+
+    /* Styling of "Toggle-Icon" */
+.menu-toggle{
+    display: none;
+}
+
+    /* here it's styling ending of "Toggle-Icon" */
+
+    /* Styling of "Footer" */
+.footer{
+    display: Flex;
+    flex-direction: row;
+    background-color: #000000;
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    text-align: center;
+}
+
+.footerbox h1{
+    color: #1e4383;
+    margin-bottom: 2rem;
+}
+
+.footerbox h4{
+    margin-bottom: 0.5rem;
+}
+
+    /* here it's styling ending of "Footer" */
+    
+
+/* Starting @Media Screen */
+
+@media screen and (max-width: 576px) {
+    .main{
+        /* display: flex; */
+        flex-direction: column;
+        width: 92vw;
+        height: 80vw;
+        /* border: 2px solid red; */
+        margin: 1rem;
+        align-content: space-between;
+        /* font-weight: bold; */
+        /* flex-wrap: wrap; */
+    }
+
+    .box-left{
+        width: 100%;
+        height: 50%;
+        /* border: 1px solid blue; */
+    }
+
+    .box-left h2{
+        font-size: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .box-left h1{
+        font-size: 2rem;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+
+    .box-left img{
+        display: block;
+        width: 30%;
+    }
+
+    .box-right{
+        width: 80%;
+        height: 45%;
+        /* border: 1px solid green; */
+    }
+
+    .box-right img{
+        width: 100%;
+    }
+
+    .menubar {
+      display: none;
+    }
+
+    .button{
+        display: none;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .hamburger {
+      width: 20px;
+    }
+
+    .footer{
+        background-color: #ffffff;
+        color: #000000;
+        justify-content: center;
+        align-items: center;
+        height: 40vh;
+        text-align: center;
+    }
+    
+    .footerbox h1{
+        color: #2969d7;
+    }
+  }

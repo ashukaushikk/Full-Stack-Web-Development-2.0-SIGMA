@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: #c6c6c6;
+}
+
+.container{
+    display: flex;
+    align-items: flex-end;
+    background-color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerbox{
+    background-color: #000000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 50%;
+    padding: 3rem;
+}
+
+.column{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid blue; */
+    text-align: justify;
+    list-style: none;
+}
+
+.col1{
+    width: 30%;
+}
+
+.col2, .col3{
+    width: 15%;
+}
+
+.col4{
+    width: 25%;
+}
+
+.column h2{
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
+
+.column p{
+    line-height: 1.5rem;
+}
+
+.containerbox .column li a{
+    text-decoration: none;
+    line-height: 2.5rem;
+}
+
+.textarea, .button{
+    width: 20vw;
+    height: 8vh;
+    border-radius: 10px;
+    margin: 0.5%;
+}
+
+.textarea{
+    border: none;
+    color: #000000;
+}
+
+.button{
+    background-color: #2c5dff;
+    font-size: 1rem;
+}
+
+@media screen and (max-width:576px) {
+    /* div{
+        border: 1px solid blue;
+    } */
+
+    .container{
+        height: 100%;
+    }
+    
+    .containerbox{
+        background-color: #000000;
+        /* display: flex; */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+        padding: 3rem;
+    }
+    .column{
+        width: 70%;
+        height: 100%;
+        /* border: 1px solid blue; */
+        text-align: justify;
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+    .textarea, .button{
+        width: 50vw;
+        /* height: 8vh; */
+        border-radius: 10px;
+        margin: 0.5%;
+    }
+}

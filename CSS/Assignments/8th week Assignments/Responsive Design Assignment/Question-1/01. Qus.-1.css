@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+}
+
+.header{
+    background-color: #000000;
+    border: 1px solid black;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 0 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Start styling of "Logo" */
+
+.logo{
+    color: #0f67ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* here it's styling ending of "Logo" */
+
+/* Start Styling of "Menubar" */
+
+.menubar{
+    display: flex;
+}
+
+.menubar a{
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 2rem;
+}
+
+/* here it's styling ending of "Menubar" */
+
+/* Start Styling of "Button" */
+
+.button{
+    background-color: hsl(215, 100%, 53%);
+    padding: 0.3em 2rem;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* here it's styling ending of "Button" */
+
+/* Starting @Media Screen */
+.menu-toggle{
+    display: none;
+}
+
+@media screen and (max-width: 576px) {
+    .menubar {
+      display: none;
+    }
+
+    .button{
+        display: none;
+    }
+  
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .hamburger {
+      width: 1rem;
+    }
+  }
