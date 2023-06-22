@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+
+    /* Start Styling of ".box" */
+.box{
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to top, #2626e4,pink);
+    color: azure;
+    border-radius: 10px;
+    margin: 1.5rem 0 0 4rem;
+}
+
+.box h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* here it's styling ending of ".box" */
