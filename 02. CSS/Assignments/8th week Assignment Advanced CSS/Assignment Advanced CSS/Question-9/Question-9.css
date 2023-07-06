@@ -19,10 +19,6 @@ body{
     --white: #ffffff;
 }
 
-div{
-    /* border: dotted; */
-}
-
 .container{
     display: flex;
     flex-direction: column;
