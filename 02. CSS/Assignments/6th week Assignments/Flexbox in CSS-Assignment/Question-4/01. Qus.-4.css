@@ -23,8 +23,8 @@ body{
     background-color: rgb(253, 254, 255);
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
-    gap: 30px;
     /* border: 1px solid red; */
+    gap: 30px;
     align-items: center;
     justify-content: center;
     position: fixed;
