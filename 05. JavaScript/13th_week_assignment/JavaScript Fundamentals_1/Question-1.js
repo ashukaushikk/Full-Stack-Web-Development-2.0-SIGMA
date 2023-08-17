@@ -1,5 +1,8 @@
 // Question.1 :- Suppose you are building a payment checkout page and must display the final price after the discount. Create a simple discount calculator that takes two values from the variables - the total cost and the discount percentage - and prints the discounted value.
 
+let finalOutput = discountedValue(2000, 20);
+console.log(finalOutput);
+
 function discountedValue(totalValue, discountPercentage){
         // Calculate the discount amount:
         const discountAmount= (discountPercentage / 100) * totalValue;
@@ -9,10 +12,8 @@ function discountedValue(totalValue, discountPercentage){
 
         console.log("Total Value: $" + totalValue); 
         console.log("Discount Percentage: " + discountPercentage + "%");
-        console.log("The final price after discount is : Rs." + discountedValue);        
+        return `The final price after discount is : Rs. ${discountedValue}`;
 }
-
-console.log[discountedValue(2000, 20)]
 
 // When you run this code, it will output:
 
