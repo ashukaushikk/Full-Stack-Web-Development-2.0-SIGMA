@@ -10,7 +10,7 @@ async function fetchAndCombine(api1, api2) {
     let postresponse = await fetch(api2);
 
     let todoData = await todoresponse.json();
-    let postData = await postresponse.json();z
+    let postData = await postresponse.json();
 
     let fetchedResult = {
       todo: todoData,
@@ -24,7 +24,7 @@ async function fetchAndCombine(api1, api2) {
   }
 }
 
-// Test_Case: =>>>
+// Test-Case: =>>>
 fetchAndCombine(
   'https://jsonplaceholder.typicode.com/todos/1',
   'https://jsonplaceholder.typicode.com/posts/1'

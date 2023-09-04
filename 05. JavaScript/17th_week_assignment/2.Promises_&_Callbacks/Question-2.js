@@ -16,6 +16,6 @@ manipulateString('aayush', logString);
 
 // When we run this function, we will have the following information printed/output : >>>
 
-// ****************************//
-// [ 4, 8, 12, 16, 20 ]        //
-// ****************************//
+// ******************************************//
+// The manipulated string is : AAYUSH        //
+// ******************************************//
