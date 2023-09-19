@@ -3,9 +3,15 @@
 
 function convertToUSD$(INR){
     const USD = INR/82;
-    console.log(`${INR} INR is ${USD} USD`);
+    return (`${INR} INR is ${USD} USD`);
 }
+let result = convertToUSD$(850);
+console.log(result);
 
-convertToUSD$(850)
 // When you run this code, it will output:
-// "850 INR is 10.365853658536585 USD"
+
+// **************************************** //
+//                                          //
+// "850 INR is 10.365853658536585 USD"      //
+//                                          //
+// **************************************** //

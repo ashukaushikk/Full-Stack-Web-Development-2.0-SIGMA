@@ -7,10 +7,13 @@ function calculateTotalCartValue(a, b, c) {
     return `The total cart value is Rs. ${total}`;
 }
 // To print the returned value of the function : >>>
-console.log(calculateTotalCartValue(125, 20, 30));
+let result = calculateTotalCartValue(125, 20, 30); 
+console.log(result);
 
 // When we run this function, we will have the following information printed/output : >>>
 
-// *********************************
-// "The total cart value is 175."  *
-// *********************************
+// ******************************** //
+//                                  //
+// "The total cart value is 175."   //
+//                                  //
+// ******************************** //

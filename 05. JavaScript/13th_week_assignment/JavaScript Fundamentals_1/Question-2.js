@@ -14,4 +14,9 @@ let validate= loginAuthentication("admin", "12345");
 console.log(validate);
 
 // When you run this code, it will output:
-// "Login successful"
+
+// ************************ //
+//                          //
+// "Login successful"       //
+//                          //
+// ************************ //
