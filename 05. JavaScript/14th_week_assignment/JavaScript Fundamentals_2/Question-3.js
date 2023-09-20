@@ -11,21 +11,23 @@ const studentList = [
   { name: "Nikhil", marks: 90 },
 ];
 
-function checkResult(user, studentList) {
+function checkResult(student, studentList) {
   // "FOR LOOP" applied for looping on the data of all the students : >>>
   for (let i = 0; i < studentList.length; i++) {
-    if (studentList[i].name === user) {
-      // "If Condition" applied for those students who have more than 90 marks : >>>
+    // "Outer - If Condition Apply for" If the student's name is in the student list then: =>>>
+    if (studentList[i].name === student) {
+      // "Inner - If Condition" applied for those students who have more than 90 marks: >>>
       if (studentList[i].marks > 90) {
-        return `Congratulation ${user}! You have cleared the exam`;
-        // "Else Condition" applied for those students who have below 90 marks : >>>
+        return `Congratulation ${student}! You have cleared the exam`;
+        // "Else Condition" applied for those students who have less than 90 marks: >>>
       } else {
-        return `Sorry ${user}! You haven't cleared the exam`;
+        return `Sorry ${student}! You haven't cleared the exam`;
       }
     }
   }
+  // This "RETURN COMMAND" is for those students whose name does not match with the array data, then Invalid User !! will come: =>>>
   return `Invalid User!!!`;
-} // This "RETURN COMMAND" is for those students whose name does not match with the array data, then Invalid User !! will come : >>>
+}
 
 let result = checkResult("Ashu", studentList);
 // To print the returned value of the function : >>>

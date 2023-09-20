@@ -26,14 +26,14 @@ console.log(productDetails(productList));
 
 // When we run this function, we will have the following information printed/output  : >>>
 
-// *******************************************
-// * Below are the product details:          *
-// *                                         *
-// * name: `Apple 2020 MacBook Air Laptop`   *
-// * price: 82000                            *
-// * color: `Gray`                           *
-// * hardDisk: `256 GB`                      *
-// *******************************************
+// ****************************************** //
+// Below are the product details:           //
+//                                           //
+// name: `Apple 2020 MacBook Air Laptop`    //
+// price: 82000                             //
+// color: `Gray`                            //
+// hardDisk: `256 GB`                       //
+// ****************************************** //
 
 
 

@@ -2,22 +2,24 @@
 
 // Function for OTP generation : >>>
 
-let OTP = ``;
 
-function OneTimePassword(OTP) {
+function OneTimePassword() {
+    let OTP = ``;
     for (let i = 0; i < 4; i++) {
         OTP += Math.floor(Math.random() * 10);
     }
     return `Here is your OTP(One-time-password): ${OTP}`
 }
 
-OTP = OneTimePassword(OTP)
+let OTP = OneTimePassword()
 
 console.log(OTP);
 
 // When we run this function, we will have the following information printed/output  : >>>
 
-// *************************************************
-// * Here is your OTP(One-time-password): _________*
-// *************************************************
+// ************************************************ //
+//                                                  //
+// Here is your OTP(One-time-password): _________   //
+//                                                  //
+// ************************************************ //
 
