@@ -9,23 +9,16 @@ const student = {
 // Function to update Grade : =>>>
 const updateGrade = (student, grade) => {
   student.grade = grade;
-};
-
-// Function to print Student Object : =>>>
-const printObj = (obj) => {
-  for (let key in obj) {
-    console.log(`${key} : ${obj[key]}`);
-  }
+  return student;
 };
 
 // Test-Case : =>>>
-updateGrade(student, 'A+');
-printObj(student);
+console.log(updateGrade(student, `A+`));
 
 // When we run this function, we will have the following information printed/output : >>>
 
-// ***************************//
-// Name : Ashwani Kumar       //
-// Age : 20                   //
-// Grade : A+                 //
-// ***************************//
+// ***************************************************** //
+//                                                       //
+// { Name: 'Ashwani Kumar', Age: 20, grade: 'A+' }       //
+//                                                       //
+// ***************************************************** //
