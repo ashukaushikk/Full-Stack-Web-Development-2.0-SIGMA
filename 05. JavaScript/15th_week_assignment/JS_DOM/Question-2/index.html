@@ -9,15 +9,62 @@
     <!-- This is My internal CSS : -->
     <style>
       .dark-mode {
-        background-color: #080808;
-        color: #f5f5f5;
+        background-color: black;
+        color: white;
+      }
+      body {
+        font-family: sans-serif;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+      }
+      #toggle {
+        position: relative;
+        display: block;
+        width: 160px;
+        height: 80px;
+        border-radius: 80px;
+        background: #222;
+        transition: 0.5s;
+        cursor: pointer;
+        box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+          inset 0 8px 8px rgba(0, 0, 0, 0.1),
+          inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+      }
+      #toggle .indicator {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(to button, #444, #222);
+        transform: scale(0.9);
+        transition: 0.5s;
+        box-shadow: inset 0 8px 40px rgba(0, 0, 0, 0.5),
+          inset 0 8px 8px rgba(255, 255, 255, 0.2),
+          inset 0 -4px 4px rgba(255, 255, 255, 0.2);
+      }
+      #toggle.active .indicator {
+        left: 80px;
+      }
+      .togglebtn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     </style>
   </head>
   <body class="">
-    <h1>This is Light mode</h1>
-    <button>Toggle Theme</button>
+    <div class="togglebtn">
+      <h1>This is Light Mode</h1>
+      <div id="toggle">
+        <i class="indicator"></i>
+      </div>
+    </div>
   </body>
-    <!-- linking my JS file -->
-    <script src="../Question-2/script.js" defer></script>
+  <!-- linking my JS file -->
+  <script src="../Question-2/script.js" defer></script>
 </html>
