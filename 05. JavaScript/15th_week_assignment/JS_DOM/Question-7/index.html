@@ -15,7 +15,7 @@
     </style>
   </head>
   <body>
-    <input type="text" name="items-search" id="items-search" placeholder="Search of items"/>
+    <input type="text" value="" name="items-search" id="items-search" placeholder="Search of items"/>
 
     <h3>Results :</h3>
     <ul>
@@ -26,6 +26,25 @@
       <li>Javascript</li>
     </ul>
   </body>
-    <!-- linking my JS file -->
-    <script src="../Question-7/script.js" defer></script>
+  <!-- linking my JS file -->
+  <script>
+    // Fetching Elements : =>>>
+    let input = document.querySelector("input");
+    let items = document.querySelectorAll("li");
+
+    // Adding Event Listener to input Elements : =>>>
+    input.addEventListener("input", () => {
+      let enteredVal = input.value.toLowerCase();
+
+      for (let item of items) {
+        let itemVal = item.textContent.toLowerCase();
+
+        if (itemVal.includes(enteredVal)) {
+          item.style.display = "block";
+        } else {
+          item.style.display = "none";
+        }
+      }
+    });
+  </script>
 </html>

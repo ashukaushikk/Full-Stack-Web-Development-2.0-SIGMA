@@ -13,15 +13,43 @@ if the conditions are met, otherwise, show "Form Validation failed." Remember, o
       <h1>Sign Up Form</h1>
       <form action="#">
         <label for="name">Name : </label>
-        <input type="text" name="name" id="name" placeholder="(minimum 3 characters)"/> <br /> <br />
+        <input type="text" name="name" id="name" placeholder="(minimum 3 characters)"/>
+        <br />
+        <br />
         <label for="email">email : </label>
-        <input type="email" name="email" id="email" placeholder="Enter your email"/> <br /> <br />
+        <input type="email" name="email" id="email" placeholder="Enter your email"/>
+        <br />
+        <br />
         <label for="password">Password : </label>
-        <input type="password" name="password" id="password" placeholder="(minimum 8 characters)"/> <br /> <br />
+        <input type="password" name="password" id="password" placeholder="(minimum 8 characters)"/>
+        <br />
+        <br />
         <button type="submit">Submit</button>
       </form>
     </div>
   </body>
-    <!-- linking my JS file -->
-    <script src="../Question-4/script.js" defer></script>
+  <!-- linking my JS file -->
+  <script>
+    // Fetching Values : =>>>
+    let nameInput = document.querySelector("input[name=name]");
+    let passwordInput = document.querySelector("input[name=password]");
+    let btn = document.querySelector("button");
+
+    // Adding Event Listener : =>>>
+    btn.addEventListener("click", (event) => {
+      // Stopping Form Submission : =>>>
+      event.preventDefault();
+
+      if (nameInput.value.length < 3) {
+        alert("Name enter at least 3 character");
+        return;
+      }
+      if (passwordInput.value.length < 8) {
+        alert("Password enter at least 8 character");
+        return;
+      }
+      alert("Form validation successfully !!");
+      return;
+    });
+  </script>
 </html>

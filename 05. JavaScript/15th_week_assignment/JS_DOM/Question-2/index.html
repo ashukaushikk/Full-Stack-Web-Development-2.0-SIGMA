@@ -20,6 +20,7 @@
         height: 100vh;
         text-align: center;
       }
+
       #toggle {
         position: relative;
         display: block;
@@ -49,7 +50,7 @@
       }
       #toggle.active .indicator {
         left: 80px;
-          box-shadow: inset 0 8px 40px rgba(243, 3, 3, 0.5),
+        box-shadow: inset 0 8px 40px rgba(243, 3, 3, 0.5),
           inset 0 8px 8px rgba(250, 4, 4, 0.2),
           inset 0 -4px 4px rgba(235, 5, 5, 0.2);
       }
@@ -69,5 +70,22 @@
     </div>
   </body>
   <!-- linking my JS file -->
-  <script src="../Question-2/script.js" defer></script>
+
+  <script>
+    // Fetching Elements : =>>>
+    const body = document.querySelector(`body`);
+    const heading = document.querySelector(`h1`);
+    const btn = document.querySelector(`#toggle`);
+
+    // Adding Event Listner : =>>>
+    btn.addEventListener("click", (event) => {
+      btn.classList.toggle(`active`);
+      body.classList.toggle(`dark-mode`);
+      if (body.getAttribute("class") === `dark-mode`) {
+        heading.textContent = "This is Dark mode";
+      } else {
+        heading.textContent = "This is Light mode";
+      }
+    });
+  </script>
 </html>
