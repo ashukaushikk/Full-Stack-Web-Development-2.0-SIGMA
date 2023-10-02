@@ -4,9 +4,10 @@ let hourBox = document.querySelector(".hour");
 let minBox = document.querySelector(".min");
 let secBox = document.querySelector(".sec");
 
-// Function to change bg-color : =>>>
-let changeBgColor = (hexcode) => {
-  container.style.backgroundColor = hexcode;
+const getColor = () => {
+  const randomNumber = Math.floor(Math.random() * 16777215);
+  const randomCode = "#" + randomNumber.toString(16);
+  container.style.backgroundColor = randomCode;
 };
 
 // Function to render time : =>>>
@@ -30,7 +31,7 @@ let showTime = () => {
   minBox.textContent = minute;
   secBox.textContent = second;
 
-  changeBgColor(`#${hour}${minute}${second}`);
+  getColor(`#${hour}${minute}${second}`);
 };
 
 // Setting interval to call func on every 1 sec automatically : =>>>
