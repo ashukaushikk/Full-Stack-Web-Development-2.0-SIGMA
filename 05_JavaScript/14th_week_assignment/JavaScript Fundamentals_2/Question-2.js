@@ -2,9 +2,13 @@
 
 // Function - Calculates sum of Cart value : >>>
 
-function calculateTotalCartValue(a, b, c) {
-    const total = a + b + c;
-    return `The total cart value is Rs. ${total}`;
+function calculateTotalCartValue() {
+  let totalValue = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    totalValue += arguments[i];
+  }
+  console.log(`The total cart value is ${totalValue}`);
+  return totalValue;
 }
 // To print the returned value of the function : >>>
 let result = calculateTotalCartValue(125, 20, 30); 

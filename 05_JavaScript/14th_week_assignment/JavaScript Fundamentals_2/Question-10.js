@@ -4,16 +4,17 @@
 
 
 function countWords(sentence) {
-    const words = sentence.split(" ");     // <<< : Split the sentence into an array of words.
-    const wordCountMap = new Map();        // <<< : Create a map to store word counts.
-    for (const word of words) {            // <<< : Count the occurrences of each word.
-        if (wordCountMap.has(word)) {
-            wordCountMap.set(word, wordCountMap.get(word) + 1);
-        } else {
-            wordCountMap.set(word, 1);
-        }
+  const words = sentence.split(/\s+/);      // <<< : Split the sentence into words using whitespace as separator.
+  const wordCountMap = new Map();           // <<< : Create a map to store word counts.
+  for (const word of words) {
+    // <<< : Count the occurrences of each word.
+    if (wordCountMap.has(word)) {
+      wordCountMap.set(word, wordCountMap.get(word) + 1);
+    } else {
+      wordCountMap.set(word, 1);
     }
-    return wordCountMap;
+  }
+  return wordCountMap;
 }
 
 const sentence = `please please submit your assignment on time your assignments are important`;
