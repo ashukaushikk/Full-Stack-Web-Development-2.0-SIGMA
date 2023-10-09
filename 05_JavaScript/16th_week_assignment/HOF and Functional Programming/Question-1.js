@@ -2,13 +2,13 @@
 
 const reverseString = (input) => {
   return setTimeout(() => {
-    let reversed = input.split('').reverse().join('');
+    let reversed = input.split("").reverse().join("");
     return console.log(reversed);
   }, 2000); // return string after 2 Seconds
 };
 
 // Test-Case: =>>>
-reverseString('ashwani_kumar');
+reverseString("ashwani_kumar");
 
 // When we run this function, we will have the following information printed/output : >>>
 

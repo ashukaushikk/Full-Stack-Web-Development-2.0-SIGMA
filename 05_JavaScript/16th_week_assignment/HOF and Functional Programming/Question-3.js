@@ -3,18 +3,35 @@
 // #Build a feature for Store's Inventory: =>>>
 
 const itemsInUSD = [
-  { name: "Iphone 15", category: "Mobile", priceUSD: 999,},
-  { name: "Macbook Air", category: "Laptops", priceUSD: 1499,},
-  { name: "Apple Watch", category: "Watches", priceUSD: 499,
-  },
+  { name: "Iphone 15", category: "Mobile", priceUSD: 999 },
+  { name: "Macbook Air", category: "Laptops", priceUSD: 1499 },
+  { name: "Apple Watch", category: "Watches", priceUSD: 499 },
 ];
+
+// const convertUSDToINR = (obj, exchangeRate) => {
+//   let itemsInINR = [];
+//   let object = {};
+//   obj.map((item) => {
+//     let priceInINR = item.priceUSD * exchangeRate;
+//     const newItem = { ...item, priceINR: priceInINR };
+//     object[item.name] = priceInINR
+//   });
+
+//   return object;
+// };
+
+// // Test-Case: =>>>
+// console.log(convertUSDToINR(itemsInUSD, 80));
+
+// When we run this function, we will have the following information printed/output : >>>
+
+// { 'Iphone 15': 79920, 'Macbook Air': 119920, 'Apple Watch': 39920 }
 
 const convertUSDToINR = (obj, exchangeRate) => {
   let itemsInINR = [];
-
   obj.map((item) => {
-    let priceInINR =  item.priceUSD* exchangeRate;
-    const newItem = { ...item, priceINR: priceInINR }
+    let priceInINR = item.priceUSD * exchangeRate;
+    const newItem = { ...item, priceINR: priceInINR };
     itemsInINR.push(newItem);
   });
 
@@ -25,16 +42,6 @@ const convertUSDToINR = (obj, exchangeRate) => {
 console.log(convertUSDToINR(itemsInUSD, 80));
 
 // When we run this function, we will have the following information printed/output : >>>
-
-// *********************************//
-// {                                //
-//   Iphone14ProMax: 160000,        //
-//   MacBook_Pro_14Inch: 240000,    //
-//   Apple_AirPods_Pro: 16000,      //
-//   MagSafe_Charger: 4400,         //
-//   AirTag_4_pack: 12000           //
-// }                                //
-// *********************************//
 
 // ******************************** //
 // [                                //
