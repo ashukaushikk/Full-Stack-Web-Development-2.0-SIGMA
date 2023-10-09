@@ -2,34 +2,41 @@
 
 // #Random Number Generator with Delay and Progress Indication: =>>>
 
-const generateNumDelay = () => {
-  let delay = 3;
-  let number = undefined;
-  console.log(`${delay} seconds left`);
+// This function is responsible for generating a random integer between 0 (inclusive) and 99 (exclusive).
+function generateRandomNumber() {
+  return Math.floor(Math.random() * 100);
+}
 
-  setTimeout(() => {
-    number = Math.floor(Math.random() * (100 - 0) + 0);
-  }, delay * 1000);
+// This function takes one argument, delayInSeconds, which specifies the delay (in seconds) before generating a random number.
+function generateRandomNumberWithDelay(delayInSeconds) {
+  console.log(`Generating a random number after a delay of ${delayInSeconds} seconds...`);
 
-  let checkAndShow = setInterval(() => {
-    if (number === undefined) {
-      delay--;
-      console.log(`${delay} seconds left`);
-    } else {
-      clearInterval(checkAndShow);
-      console.log(number);
+  let countdown = delayInSeconds;
+
+  const countdownInterval = setInterval(() => {
+    console.log(`${countdown} seconds remaining...`);
+    countdown--;
+
+    if (countdown === 0) {
+      clearInterval(countdownInterval);
+      const randomNumber = generateRandomNumber();
+      console.log(`Random number generated: ${randomNumber}`);
     }
   }, 1000);
-};
+}
 
 // Test-Case: =>>>
-generateNumDelay();
+generateRandomNumberWithDelay(3);
+
 
 // When we run this function, we will have the following information printed/output : >>>
 
-// *******************//
-// 3 seconds left     //
-// 2 seconds left     //
-// 1 seconds left     //
-// $random_number     // 
-// *******************//
+// ********************************************************** //
+// Generating a random number after a delay of 3 seconds...   //
+// 3 seconds left                                             //
+// 2 seconds left                                             //
+// 1 seconds left                                             //
+// $random_number                                             //
+// ********************************************************** //
+
+

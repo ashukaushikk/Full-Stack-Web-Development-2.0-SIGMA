@@ -2,23 +2,23 @@
 
 // #Build a feature for Store's Inventory: =>>>
 
-const itemsInUSD = {
-  Iphone14ProMax: 2000,
-  MacBook_Pro_14Inch: 3000,
-  Apple_AirPods_Pro: 200,
-  MagSafe_Charger: 55,
-  AirTag_4_pack: 150
-};
+const itemsInUSD = [
+  { name: "Iphone 15", category: "Mobile", priceUSD: 999,},
+  { name: "Macbook Air", category: "Laptops", priceUSD: 1499,},
+  { name: "Apple Watch", category: "Watches", priceUSD: 499,
+  },
+];
 
 const convertUSDToINR = (obj, exchangeRate) => {
-  const itemsinINR = {};
+  let itemsInINR = [];
 
-  Object.keys(obj).map((item) => {
-    let priceInINR = itemsInUSD[item] * exchangeRate;
-    itemsinINR[item] = priceInINR;
+  obj.map((item) => {
+    let priceInINR =  item.priceUSD* exchangeRate;
+    const newItem = { ...item, priceINR: priceInINR }
+    itemsInINR.push(newItem);
   });
 
-  return itemsinINR;
+  return itemsInINR;
 };
 
 // Test-Case: =>>>
@@ -35,3 +35,26 @@ console.log(convertUSDToINR(itemsInUSD, 80));
 //   AirTag_4_pack: 12000           //
 // }                                //
 // *********************************//
+
+// ******************************** //
+// [                                //
+//   {                              //
+//     name: "Iphone 15",           //
+//     category: "Mobile",          //
+//     priceUSD: 999,               //
+//     priceINR: 79920,             //
+//   },                             //
+//   {                              //
+//     name: "Macbook Air",         //
+//     category: "Laptops",         //
+//     priceUSD: 1499,              //
+//     priceINR: 119920,            //
+//   },                             //
+//   {                              //
+//     name: "Apple Watch",         //
+//     category: "Watches",         //
+//     priceUSD: 499,               //
+//     priceINR: 39920,             //
+//   },                             //
+// ]                                //
+// ******************************** //

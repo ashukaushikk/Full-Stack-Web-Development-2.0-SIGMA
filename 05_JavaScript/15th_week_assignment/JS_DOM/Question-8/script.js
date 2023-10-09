@@ -3,6 +3,7 @@ let container = document.querySelector(".time-container");
 let hourBox = document.querySelector(".hour");
 let minBox = document.querySelector(".min");
 let secBox = document.querySelector(".sec");
+let periods = document.querySelector(".period");
 
 const getColor = () => {
   const randomNumber = Math.floor(Math.random() * 16777215);
@@ -16,6 +17,14 @@ let showTime = () => {
   let hour = date.getHours();
   let minute = date.getMinutes();
   let second = date.getSeconds();
+
+  // Check if it's PM (hour >= 12), and adjust the hour and period accordingly
+  if (hour >= 12) {
+    periods.textContent = "PM";
+    if (hour > 12) {
+      hour -= 12;
+    }
+  }
 
   if (hour < 10) {
     hour = "0" + hour;
