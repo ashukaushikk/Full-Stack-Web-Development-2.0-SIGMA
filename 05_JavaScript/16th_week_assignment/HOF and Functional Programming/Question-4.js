@@ -2,22 +2,21 @@
 
 // #Filtering and Capitalizing: Books Published After 2010 with Author Names: =>>>
 
-
 const createBook = (bookName, bookAuthor, bookPubYear) => {
   return {
-    title: bookName,
-    author: bookAuthor,
-    publicationYear: bookPubYear,
+    Title: bookName,
+    Author: bookAuthor,
+    PublicationYear: bookPubYear,
   };
 };
 
 // Create a list of BookName, Author & PublicationYear: =>>>
 const bookList = [
-  createBook('Pride and Prejudice', 'Jane Austen', 1813),
-  createBook('The Lord of the Rings', 'J.R.R. Tolkien', 1954),
-  createBook('To Kill a Mockingbird', 'Harper lee', 1960),
-  createBook('The Hunger Games', 'Suzanne Collins', 2012),
-  createBook('The Great Gatsby', 'F. Scott Fitzgerald', 2015),
+  createBook("Pride and Prejudice", "Jane Austen", 1813),
+  createBook("The Lord of the Rings", "J.R.R. Tolkien", 1954),
+  createBook("To Kill a Mockingbird", "Harper lee", 1960),
+  createBook("The Hunger Games", "Suzanne Collins", 2012),
+  createBook("The Great Gatsby", "F. Scott Fitzgerald", 2015),
 ];
 
 // Main Operation Function: =>>>
@@ -39,16 +38,16 @@ console.log(bookAfterYear(bookList, 2010));
 // When we run this function, we will have the following information printed/output : >>>
 
 // *************************************//
-// [                                    // 
+// [                                    //
 //   {                                  //
-//     title: 'The Hunger Games',       //
-//     author: 'SUZANNE COLLINS',       //
-//     publicationYear: 2012            //
+//     Title: 'The Hunger Games',       //
+//     Author: 'SUZANNE COLLINS',       //
+//     PublicationYear: 2012            //
 //   },                                 //
 //   {                                  //
-//     title: 'The Great Gatsby',       //
-//     author: 'F. SCOTT FITZGERALD',   //
-//     publicationYear: 2015            //
+//     Title: 'The Great Gatsby',       //
+//     Author: 'F. SCOTT FITZGERALD',   //
+//     PublicationYear: 2015            //
 //   }                                  //
 // ]                                    //
 // *************************************//

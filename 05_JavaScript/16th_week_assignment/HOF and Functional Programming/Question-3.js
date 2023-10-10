@@ -27,19 +27,19 @@ const itemsInUSD = [
 
 // { 'Iphone 15': 79920, 'Macbook Air': 119920, 'Apple Watch': 39920 }
 
-const convertUSDToINR = (obj, exchangeRate) => {
-  let itemsInINR = [];
-  obj.map((item) => {
-    let priceInINR = item.priceUSD * exchangeRate;
-    const newItem = { ...item, priceINR: priceInINR };
-    itemsInINR.push(newItem);
-  });
+// const convertUSDToINR = (obj, exchangeRate) => {
+//   let itemsInINR = [];
+//   obj.map((item) => {
+//     let priceInINR = item.priceUSD * exchangeRate;
+//     const newItem = { ...item, priceINR: priceInINR };
+//     itemsInINR.push(newItem);
+//   });
 
-  return itemsInINR;
-};
+//   return itemsInINR;
+// };
 
-// Test-Case: =>>>
-console.log(convertUSDToINR(itemsInUSD, 80));
+// // Test-Case: =>>>
+// console.log(convertUSDToINR(itemsInUSD, 80));
 
 // When we run this function, we will have the following information printed/output : >>>
 
