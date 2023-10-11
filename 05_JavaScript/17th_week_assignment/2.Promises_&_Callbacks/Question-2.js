@@ -8,14 +8,14 @@ const manipulateString = (str, callback) => {
 
 // Callback_Function (2nd function): =>>>
 const logString = (capitalizeStr) => {
-  console.log(`The manipulated string is : ${capitalizeStr}`);
+  return `The manipulated string is : ${capitalizeStr}`;
 };
 
 // Test_Case: =>>>
-manipulateString('aayush', logString);
+console.log(manipulateString("ashu", logString));
 
 // When we run this function, we will have the following information printed/output : >>>
 
-// ******************************************//
-// The manipulated string is : AAYUSH        //
-// ******************************************//
+// **************************************** //
+// The manipulated string is : ASHU         //
+// **************************************** //

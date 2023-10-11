@@ -3,7 +3,7 @@
 
 // Main_Function_Run: =>>>
 const doubleCallback = (array, callback) => {
-  let value = callback(array);                  //Call 2nd function
+  let value = callback(array); //Call 2nd function
   return value;
 };
 

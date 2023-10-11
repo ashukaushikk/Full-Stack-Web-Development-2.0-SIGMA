@@ -2,31 +2,29 @@
 // #Arrange in alphabetical order: =>>>
 
 // Main_Function_Run: =>>>
-const showBookTitles = (booksObj, callback) => {
-  let booksTitles = [];
-
-  booksObj.map((book) => {
-    booksTitles.push(book.title);
-  });
-
-  return callback(booksTitles);
+const showBookTitles = (obj, callback) => {
+  let value = callback(obj);
+  return value;
 };
 
 // Callback_Function (2nd function): =>>>
-const logBooksTitle = (titlesArr) => {
-  console.log(titlesArr.sort());
+const logBooksTitle = (obj) => {
+  let booksTitles = obj.map((book) => {
+    return book.title;
+  });
+  return booksTitles.sort();
 };
 
 // Test_Case: =>>>
 const books = [
-  { title: 'Pride and Prejudice', author: 'Jane Austen', year: 1813, },
-  { title: 'The Great Gatsby', author: 'F. Scott Fitzgerald', year: 1925, },
-  { title: '1984', author: 'George Orwell', year: 1949, },
-  { title: 'The Catcher in the Rye', author: 'J.D. Salinger', year: 1951, },
-  { title: 'To Kill a Mockingbird', author: 'Harper Lee', year: 1960, },
+  { title: "Pride and Prejudice", author: "Jane Austen", year: 1813 },
+  { title: "The Great Gatsby", author: "F. Scott Fitzgerald", year: 1925 },
+  { title: "1984", author: "George Orwell", year: 1949 },
+  { title: "The Catcher in the Rye", author: "J.D. Salinger", year: 1951 },
+  { title: "To Kill a Mockingbird", author: "Harper Lee", year: 1960 },
 ];
 
-showBookTitles(books, logBooksTitle);
+console.log(showBookTitles(books, logBooksTitle));
 
 // When we run this function, we will have the following information printed/output : >>>
 

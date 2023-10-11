@@ -15,7 +15,7 @@ const greetWithPromise = (name) => {
 };
 
 // Test_Case: =>>>
-let result = greetWithPromise("Arpan");
+let result = greetWithPromise("Ashwani Kumar");
 
 result
   .then((result) => {
@@ -26,8 +26,7 @@ result
     console.log(err);
   });
 
-
-  // When we run this function, we will have the following information printed/output : >>>
+// When we run this function, we will have the following information printed/output : >>>
 
 // *************************************//
 // Hello Arpan!                         //
