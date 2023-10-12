@@ -1,5 +1,5 @@
 
-# Question - 6 
+# Question - 7 
 
 ## Explain 3 schema architecture along with its advantages.
 
