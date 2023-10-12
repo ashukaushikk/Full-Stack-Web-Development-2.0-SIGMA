@@ -15,8 +15,7 @@ const fetchData = (api) => {
 };
 
 // Test_Case: =>>>
-fetchData('https://jsonplaceholder.typicode.com/todos/1');
-
+fetchData("https://jsonplaceholder.typicode.com/todos/1");
 
 // When we run this function, we will have the following information printed/output : >>>
 

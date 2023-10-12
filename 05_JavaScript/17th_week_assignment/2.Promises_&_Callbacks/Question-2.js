@@ -12,10 +12,10 @@ const logString = (capitalizeStr) => {
 };
 
 // Test_Case: =>>>
-console.log(manipulateString("ashu", logString));
+console.log(manipulateString("ashwani Kumar", logString));
 
 // When we run this function, we will have the following information printed/output : >>>
 
-// **************************************** //
-// The manipulated string is : ASHU         //
-// **************************************** //
+// ******************************************* //
+// The manipulated string is : ASHWANI KUMAR   //
+// ******************************************* //

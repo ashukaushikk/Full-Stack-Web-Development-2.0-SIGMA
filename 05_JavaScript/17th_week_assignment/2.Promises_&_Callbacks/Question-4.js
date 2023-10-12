@@ -3,16 +3,15 @@
 
 // Main_Function_Run: =>>>
 const showBookTitles = (obj, callback) => {
-  let value = callback(obj);
-  return value;
+  const booksTitles = obj.map((book) => {
+    return callback(book);
+  });
+  return booksTitles.sort();
 };
 
 // Callback_Function (2nd function): =>>>
 const logBooksTitle = (obj) => {
-  let booksTitles = obj.map((book) => {
-    return book.title;
-  });
-  return booksTitles.sort();
+  return obj.title;
 };
 
 // Test_Case: =>>>

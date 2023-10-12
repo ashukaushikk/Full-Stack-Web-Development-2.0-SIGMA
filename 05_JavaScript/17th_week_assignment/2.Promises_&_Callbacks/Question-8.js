@@ -22,6 +22,24 @@ const fetchAndConsole = (api) => {
 // Test_Case: =>>>
 fetchAndConsole("https://jsonplaceholder.typicode.com/posts");
 
+// note : The screen shot of full output is not possible because its too long.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // When we run this function, we will have the following information printed/output : >>>
 
 // *************************************************************************************************** //

@@ -4,9 +4,9 @@
 
 const createBook = (bookName, bookAuthor, bookPubYear) => {
   return {
-    Title: bookName,
-    Author: bookAuthor,
-    PublicationYear: bookPubYear,
+    title: bookName,
+    author: bookAuthor,
+    publicationYear: bookPubYear,
   };
 };
 

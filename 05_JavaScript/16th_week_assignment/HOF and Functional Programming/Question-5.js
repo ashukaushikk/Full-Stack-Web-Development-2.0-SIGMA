@@ -16,7 +16,7 @@ URL.map((url) => { console.log(isValid(url));});
 
 // ******************************************* //
 //                                             //
-// "www.example.com" Not a valid URL           //
+// "www.example.com" not a valid URL           //
 // "http://www.openai.com" is a Valid URL      //
 //                                             //
 // ******************************************* //

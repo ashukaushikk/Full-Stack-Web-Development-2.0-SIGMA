@@ -3,17 +3,15 @@
 
 // Main_Function_Run: =>>>
 const doubleCallback = (array, callback) => {
-  let value = callback(array); //Call 2nd function
-  return value;
+  const newArray = array.map((element) => {
+    return callback(element);
+  });
+  return newArray;
 };
 
 // Callback_Function (2nd function): =>>>
 const first = (array) => {
-  let newArray = [];
-  array.map((elem) => {
-    newArray.push(elem * 2);
-  });
-  return newArray;
+  return array * 2;
 };
 
 // Test_Case: =>>>

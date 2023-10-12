@@ -19,12 +19,12 @@ const logMessage = (fullName, age) => {
 };
 
 // Test_Case: =>>>
-const person = { firstName: "Ashu", lastName: "Kaushik", age: "28" };
+const person = { firstName: "Ashwani", lastName: "Kumar", age: "28" };
 
 console.log(ageInDays(person, logMessage));
 
 // When we run this function, we will have the following information printed/output : >>>
 
 // **************************************************************************//
-// The person's full name is "Ashu Kaushik" and their age in days is 10220   //
+// The person's full name is "Ashwani Kumar" and their age in days is 10220   //
 // **************************************************************************//
