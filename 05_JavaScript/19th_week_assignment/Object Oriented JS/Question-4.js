@@ -4,15 +4,11 @@ class Shape {
   constructor() {}
 
   calculateArea() {
-    console.log(
-      `Area calculation is not possible without proper shape definition`
-    );
+    console.log(`Area calculation is not possible without proper shape definition`);
   }
 
   calculatePerimeter() {
-    console.log(
-      `Perimeter calculation is not possible without proper shape definition`
-    );
+    console.log(`Perimeter calculation is not possible without proper shape definition`);
   }
 }
 
@@ -68,21 +64,15 @@ class Triangle extends Shape {
 
 // Test-Case: =>>>
 const circle = new Circle(5);
-console.log(
-  `Circle - Area: ${circle.calculateArea()}, Perimeter: ${circle.calculatePerimeter()}`
-);
+console.log(`Circle - Area: ${circle.calculateArea()}, Perimeter: ${circle.calculatePerimeter()}`);
 console.log();
 
 const rectangle = new Rectangle(4, 6);
-console.log(
-  `Rectangle - Area: ${rectangle.calculateArea()}, Perimeter: ${rectangle.calculatePerimeter()}`
-);
+console.log(`Rectangle - Area: ${rectangle.calculateArea()}, Perimeter: ${rectangle.calculatePerimeter()}`);
 console.log();
 
 const triangle = new Triangle(8, 6, 5, 7, 10);
-console.log(
-  `Triangle - Area: ${triangle.calculateArea()}, Perimeter: ${triangle.calculatePerimeter()}`
-);
+console.log(`Triangle - Area: ${triangle.calculateArea()}, Perimeter: ${triangle.calculatePerimeter()}`);
 
 // When we run this function, we will have the following information printed/output : >>>
 

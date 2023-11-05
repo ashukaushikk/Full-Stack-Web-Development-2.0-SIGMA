@@ -15,7 +15,7 @@ class Product {
     }
   }
   
-  Inventory.prototype.addProduct = function (product) {
+  Inventory.prototype.dProductad = function (product) {
     this.products.push(product);
     console.log(`Added ${product.name} to the Inventory`);
   };
