@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <h1 className="flex justify-center items-center heading text-4xl font-extrabold">
-        <Link to="/">Walkthrough with React Part 3</Link>
+        <Link to="/">React Image Gallery</Link>
       </h1>
       <CustomRoutes />
     </>
