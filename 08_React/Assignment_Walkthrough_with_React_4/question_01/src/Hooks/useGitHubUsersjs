@@ -1,0 +1,59 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+
+function useGitHubUsers() {
+  const [usersListState, setUsersListState] = useState({
+    imageList: [],
+    isLoading: true,
+    totalUsers: "",
+    count: 0,
+  });
+  
+  // eslint-disable-next-line no-unused-vars
+  const { imageList, isLoading, count, totalUsers } = usersListState;
+
+  // const URL = `https://api.slingacademy.com/v1/sample-data/photos?offset=${count}&limit=12`;
+  const URL = `https://api.slingacademy.com/v1/sample-data/users?offset=${count}&limit=20`;
+
+  async function downloadImages() {
+    try {
+      const response = await axios.get(URL); //this downloads list of 5 images
+      // const imagesResults = response.data.photos;
+      const imagesResults = response.data.users;
+      const totalUsers = response.data.total_users;
+      // now iterate on the data of each images, and extact id, title, description, user & image
+      const res = imagesResults.map((imagesData) => {
+        return {
+          id: imagesData.id,
+          // title: imagesData.title,
+          first_name: imagesData.first_name,
+          last_name: imagesData.last_name,
+          city: imagesData.city,
+          image: imagesData.profile_picture,
+        };
+      });
+      
+      setUsersListState((state) => ({
+        ...state,
+        imageList: res,
+        totalUsers: totalUsers,
+        isLoading: false,
+      }));
+    } catch (error) {
+      console.error("Error downloading images:", error);
+      setUsersListState((state) => ({
+        ...state,
+        isLoading: false,
+      }));
+    }
+  }
+  
+  useEffect(() => {
+    downloadImages();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [count]);
+  
+  return { count, usersListState, setUsersListState } 
+}
+    
+export default useGitHubUsers;

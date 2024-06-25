@@ -12,8 +12,6 @@ function ImageDetails() {
         `https://api.slingacademy.com/v1/sample-data/photos/${id}`
       );
       const responseResult = response.data.photo;
-      console.log("responseResult", responseResult);
-
       setImages(responseResult);
     } catch (error) {
       console.error("Error fetching the images", error);
@@ -22,7 +20,7 @@ function ImageDetails() {
 
   useEffect(() => {
     downloadImages();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   return (

@@ -1,13 +1,20 @@
-import ListOfImages from "../ListOfImages";
-import Search from "../Search"
+import { useState } from "react";
+import GitHubUsers from "../GitHubUsers";
+import Search from "../Search";
+import GitHubUserDetails from "../GitHubUserDetails";
 
 function Category() {
+  const [searchTerm, setSearchTerm] = useState("");
+
   return (
-    <div className="photo_wrapper flex flex-col h-full gap-4 justify-between items-center">
-      <Search />
-      <ListOfImages/>
-    </div>
+    <>
+      <div className="flex flex-col gap-y-4 justify-between items-center">
+        <Search updateSearchTerm={setSearchTerm} />
+        {(!searchTerm) ? (<GitHubUsers />) : (<GitHubUserDetails key={searchTerm} username={searchTerm}/>
+        )}
+      </div>
+    </>
   );
 }
 
-export default Category
+export default Category;
