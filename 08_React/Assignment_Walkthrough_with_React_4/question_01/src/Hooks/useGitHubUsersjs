@@ -2,10 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 function useGitHubUsers() {
-  const [usersListState, setUsersListState] = useState({
-    imageList: [],
-    isLoading: true,
-  });
+  const [usersListState, setUsersListState] = useState({ imageList: [], isLoading: true, });
 
   const URL = "https://api.github.com/users";
   const gitToken = "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";
