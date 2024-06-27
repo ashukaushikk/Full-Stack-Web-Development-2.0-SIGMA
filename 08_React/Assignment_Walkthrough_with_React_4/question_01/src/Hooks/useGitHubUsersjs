@@ -5,40 +5,56 @@ function useGitHubUsers() {
   const [usersListState, setUsersListState] = useState({
     imageList: [],
     isLoading: true,
-    totalUsers: "",
-    count: 0,
   });
-  
-  // eslint-disable-next-line no-unused-vars
-  const { imageList, isLoading, count, totalUsers } = usersListState;
 
-  // const URL = `https://api.slingacademy.com/v1/sample-data/photos?offset=${count}&limit=12`;
-  const URL = `https://api.slingacademy.com/v1/sample-data/users?offset=${count}&limit=20`;
+  const URL = "https://api.github.com/users";
+  const gitToken = "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";
 
   async function downloadImages() {
     try {
-      const response = await axios.get(URL); //this downloads list of 5 images
-      // const imagesResults = response.data.photos;
-      const imagesResults = response.data.users;
-      const totalUsers = response.data.total_users;
-      // now iterate on the data of each images, and extact id, title, description, user & image
-      const res = imagesResults.map((imagesData) => {
-        return {
-          id: imagesData.id,
-          // title: imagesData.title,
-          first_name: imagesData.first_name,
-          last_name: imagesData.last_name,
-          city: imagesData.city,
-          image: imagesData.profile_picture,
-        };
+      const response = await axios.get(URL, {
+        headers: {
+          Authorization: `token ${gitToken}`, // Correct token format
+        },
       });
-      
-      setUsersListState((state) => ({
-        ...state,
-        imageList: res,
-        totalUsers: totalUsers,
+      const responseResult = response.data;
+
+      // Fetch additional details for each user
+      const gitHubUserWithDetails = await Promise.all(
+        responseResult.map(async (data) => {
+          try {
+            const userDetails = await axios.get(data.url, {
+              headers: {
+                Authorization: `token ${gitToken}`,
+              },
+            });
+            return {
+              ...data,
+              id: userDetails.data.id,
+              name: userDetails.data.name || "Unknown",
+              image: userDetails.data.avatar_url,
+              city: userDetails.data.location || "Unknown",
+            };
+          } catch (error) {
+            console.error(
+              `Error fetching details for user ${data.login}:`,
+              error
+            );
+            return {
+              ...data,
+              id: null,
+              name: "Unknown",
+              image: null,
+              city: "Unknown",
+            };
+          }
+        })
+      );
+
+      setUsersListState({
+        imageList: gitHubUserWithDetails,
         isLoading: false,
-      }));
+      });
     } catch (error) {
       console.error("Error downloading images:", error);
       setUsersListState((state) => ({
@@ -47,13 +63,13 @@ function useGitHubUsers() {
       }));
     }
   }
-  
+
   useEffect(() => {
     downloadImages();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [count]);
-  
-  return { count, usersListState, setUsersListState } 
+  }, []);
+
+  return { usersListState, setUsersListState };
 }
-    
+
 export default useGitHubUsers;

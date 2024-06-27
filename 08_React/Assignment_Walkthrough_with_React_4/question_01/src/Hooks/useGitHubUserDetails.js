@@ -2,17 +2,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export function useGitHubUserDetails(id, username) {
+export function useGitHubUserDetails(id, name) {
   const [userDetails, setUserDetails] = useState([]);
   async function downloadImages() {
     let response;
     try {
-      const endpoint = username
-        ? `https://api.slingacademy.com/v1/sample-data/users/${username}`
-        : `https://api.slingacademy.com/v1/sample-data/users/${id}`;
+      const endpoint = name
+        ? `https://api.github.com/users/${name}`
+        : `https://api.github.com/users/${id}`;
       response = await axios.get(endpoint);
-
-      const responseResult = response.data.user;
+      console.log("response :", response);
+      const responseResult = response.data;
       setUserDetails(responseResult);
     } catch (error) {
       console.error("Error fetching the userDetails", error);
@@ -22,6 +22,6 @@ export function useGitHubUserDetails(id, username) {
     downloadImages();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
-
+  console.log("userDetails :", userDetails);
   return { userDetails };
 }
