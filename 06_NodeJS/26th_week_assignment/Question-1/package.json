@@ -1,0 +1,23 @@
+{
+  "name": "question-1",
+  "version": "1.0.0",
+  "description": "This is my First Assignment on module 36 of NodeJS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashukaushikk/Full-Stack-Web-Development-2.0-SIGMA/tree/master/06_NodeJS/26th_week_assignment"
+  },
+  "keywords": [
+    "module",
+    "36"
+  ],
+  "author": "PW Skill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashukaushik/Full-Stack-Web-Development-2.0-SIGMA/issues"
+  },
+  "homepage": "https://github.com/ashukaushikk?tab=repositories"
+}
